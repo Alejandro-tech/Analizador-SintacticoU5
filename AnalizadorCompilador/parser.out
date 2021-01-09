@@ -1,0 +1,2075 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    ABSTRACT
+    AS
+    BREAK
+    BYTE
+    CASE
+    CATCH
+    CHAR
+    CIN
+    CLASS
+    COMA
+    COMENTARIO
+    COMILLA
+    COMMENT
+    CONST
+    CONTINUE
+    COUT
+    DEFAULT
+    DELEGATE
+    DIPLED
+    DIPLEI
+    DO
+    DOPUNTOS
+    DOUBLE
+    EVENT
+    EXPLICIT
+    EXTERN
+    FALSE
+    FINALLY
+    FIXED
+    FLOAT
+    FOR
+    FOREACH
+    GOTO
+    IGNORE
+    IGUALIGUAL
+    IMPLICIT
+    IN
+    INTERFACE
+    INTERNAL
+    IS
+    LOCK
+    LONG
+    MAIN
+    MODULO
+    NAMESPACE
+    NEW
+    NULL
+    OBJECT
+    OPERATOR
+    OUT
+    PRIVATE
+    PROTECTED
+    PUBLIC
+    PUNTO
+    REF
+    RETURN
+    STATIC
+    STRING
+    STRUCT
+    SWITCH
+    THIS
+    THROW
+    TRUE
+    TRY
+    TYPEOF
+    UINT
+    ULONG
+    UNCHECKED
+    UNSAFE
+    USHORT
+    USING
+    VIRTUAL
+    VOID
+    VOLATILE
+    WHILE
+
+Grammar
+
+Rule 0     S' -> declaracion
+Rule 1     declaracion -> IF
+Rule 2     declaracion -> IGUALQUE
+Rule 3     declaracion -> ELSE
+Rule 4     expresion -> PTCOMA
+Rule 5     declaracion -> expresion
+Rule 6     expresion -> expresion SUMA expresion
+Rule 7     expresion -> expresion MENOS expresion
+Rule 8     expresion -> expresion MULTIPLICAR expresion
+Rule 9     expresion -> expresion DIVISION expresion
+Rule 10    expresion -> PARENTIZQ expresion PARENTDER
+Rule 11    expresion -> CORCHETEIZQ expresion CORCHETEDER
+Rule 12    expresion -> expresion MENORQUE expresion
+Rule 13    expresion -> expresion MAYORQUE expresion
+Rule 14    expresion -> expresion MENORIGUALQUE expresion
+Rule 15    expresion -> expresion MAYORIGUALQUE expresion
+Rule 16    expresion -> expresion IGUALQUE expresion
+Rule 17    expresion -> PARENTIZQ expresion MENORQUE expresion PARENTDER
+Rule 18    expresion -> IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+Rule 19    expresion -> PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+Rule 20    expresion -> PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+Rule 21    expresion -> PARENTIZQ expresion IGUALQUE expresion PARENTDER
+Rule 22    expresion -> NUMBER
+Rule 23    expresion -> INT ID IGUALQUE NUMBER PTCOMA
+Rule 24    expresion -> INT ID PTCOMA
+Rule 25    expresion -> INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+Rule 26    expresion -> INT ID IGUALQUE ID PTCOMA
+Rule 27    expresion -> ID
+Rule 28    expresion -> END
+
+Terminals, with rules where they appear
+
+ABSTRACT             : 
+AS                   : 
+BREAK                : 
+BYTE                 : 
+CASE                 : 
+CATCH                : 
+CHAR                 : 
+CIN                  : 
+CLASS                : 
+COMA                 : 
+COMENTARIO           : 
+COMILLA              : 
+COMMENT              : 
+CONST                : 
+CONTINUE             : 
+CORCHETEDER          : 11
+CORCHETEIZQ          : 11
+COUT                 : 
+DEFAULT              : 
+DELEGATE             : 
+DIPLED               : 
+DIPLEI               : 
+DIVISION             : 9
+DO                   : 
+DOPUNTOS             : 
+DOUBLE               : 
+ELSE                 : 3
+END                  : 28
+EVENT                : 
+EXPLICIT             : 
+EXTERN               : 
+FALSE                : 
+FINALLY              : 
+FIXED                : 
+FLOAT                : 
+FOR                  : 
+FOREACH              : 
+GOTO                 : 
+ID                   : 23 24 25 25 25 26 26 27
+IF                   : 1 18
+IGNORE               : 
+IGUALIGUAL           : 
+IGUALQUE             : 2 16 21 23 25 26
+IMPLICIT             : 
+IN                   : 
+INT                  : 23 24 25 26
+INTERFACE            : 
+INTERNAL             : 
+IS                   : 
+LOCK                 : 
+LONG                 : 
+MAIN                 : 
+MAYORIGUALQUE        : 15 20
+MAYORQUE             : 13 18
+MENORIGUALQUE        : 14 19
+MENORQUE             : 12 17
+MENOS                : 7
+MODULO               : 
+MULTIPLICAR          : 8 25
+NAMESPACE            : 
+NEW                  : 
+NULL                 : 
+NUMBER               : 22 23
+OBJECT               : 
+OPERATOR             : 
+OUT                  : 
+PARENTDER            : 10 17 18 19 20 21
+PARENTIZQ            : 10 17 18 19 20 21
+PRIVATE              : 
+PROTECTED            : 
+PTCOMA               : 4 23 24 25 26
+PUBLIC               : 
+PUNTO                : 
+REF                  : 
+RETURN               : 
+STATIC               : 
+STRING               : 
+STRUCT               : 
+SUMA                 : 6
+SWITCH               : 
+THIS                 : 
+THROW                : 
+TRUE                 : 
+TRY                  : 
+TYPEOF               : 
+UINT                 : 
+ULONG                : 
+UNCHECKED            : 
+UNSAFE               : 
+USHORT               : 
+USING                : 
+VIRTUAL              : 
+VOID                 : 
+VOLATILE             : 
+WHILE                : 
+error                : 
+
+Nonterminals, with rules where they appear
+
+declaracion          : 0
+expresion            : 5 6 6 7 7 8 8 9 9 10 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20 20 21 21
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . declaracion
+    (1) declaracion -> . IF
+    (2) declaracion -> . IGUALQUE
+    (3) declaracion -> . ELSE
+    (5) declaracion -> . expresion
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    IF              shift and go to state 2
+    IGUALQUE        shift and go to state 3
+    ELSE            shift and go to state 4
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    declaracion                    shift and go to state 1
+    expresion                      shift and go to state 5
+
+state 1
+
+    (0) S' -> declaracion .
+
+
+
+state 2
+
+    (1) declaracion -> IF .
+    (18) expresion -> IF . PARENTIZQ expresion MAYORQUE expresion PARENTDER
+
+    $end            reduce using rule 1 (declaracion -> IF .)
+    PARENTIZQ       shift and go to state 13
+
+
+state 3
+
+    (2) declaracion -> IGUALQUE .
+
+    $end            reduce using rule 2 (declaracion -> IGUALQUE .)
+
+
+state 4
+
+    (3) declaracion -> ELSE .
+
+    $end            reduce using rule 3 (declaracion -> ELSE .)
+
+
+state 5
+
+    (5) declaracion -> expresion .
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+    $end            reduce using rule 5 (declaracion -> expresion .)
+    SUMA            shift and go to state 14
+    MENOS           shift and go to state 15
+    MULTIPLICAR     shift and go to state 16
+    DIVISION        shift and go to state 17
+    MENORQUE        shift and go to state 18
+    MAYORQUE        shift and go to state 19
+    MENORIGUALQUE   shift and go to state 20
+    MAYORIGUALQUE   shift and go to state 21
+    IGUALQUE        shift and go to state 22
+
+
+state 6
+
+    (4) expresion -> PTCOMA .
+
+    SUMA            reduce using rule 4 (expresion -> PTCOMA .)
+    MENOS           reduce using rule 4 (expresion -> PTCOMA .)
+    MULTIPLICAR     reduce using rule 4 (expresion -> PTCOMA .)
+    DIVISION        reduce using rule 4 (expresion -> PTCOMA .)
+    MENORQUE        reduce using rule 4 (expresion -> PTCOMA .)
+    MAYORQUE        reduce using rule 4 (expresion -> PTCOMA .)
+    MENORIGUALQUE   reduce using rule 4 (expresion -> PTCOMA .)
+    MAYORIGUALQUE   reduce using rule 4 (expresion -> PTCOMA .)
+    IGUALQUE        reduce using rule 4 (expresion -> PTCOMA .)
+    $end            reduce using rule 4 (expresion -> PTCOMA .)
+    PARENTDER       reduce using rule 4 (expresion -> PTCOMA .)
+    CORCHETEDER     reduce using rule 4 (expresion -> PTCOMA .)
+
+
+state 7
+
+    (10) expresion -> PARENTIZQ . expresion PARENTDER
+    (17) expresion -> PARENTIZQ . expresion MENORQUE expresion PARENTDER
+    (19) expresion -> PARENTIZQ . expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> PARENTIZQ . expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> PARENTIZQ . expresion IGUALQUE expresion PARENTDER
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 23
+
+state 8
+
+    (11) expresion -> CORCHETEIZQ . expresion CORCHETEDER
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 25
+
+state 9
+
+    (22) expresion -> NUMBER .
+
+    SUMA            reduce using rule 22 (expresion -> NUMBER .)
+    MENOS           reduce using rule 22 (expresion -> NUMBER .)
+    MULTIPLICAR     reduce using rule 22 (expresion -> NUMBER .)
+    DIVISION        reduce using rule 22 (expresion -> NUMBER .)
+    MENORQUE        reduce using rule 22 (expresion -> NUMBER .)
+    MAYORQUE        reduce using rule 22 (expresion -> NUMBER .)
+    MENORIGUALQUE   reduce using rule 22 (expresion -> NUMBER .)
+    MAYORIGUALQUE   reduce using rule 22 (expresion -> NUMBER .)
+    IGUALQUE        reduce using rule 22 (expresion -> NUMBER .)
+    $end            reduce using rule 22 (expresion -> NUMBER .)
+    PARENTDER       reduce using rule 22 (expresion -> NUMBER .)
+    CORCHETEDER     reduce using rule 22 (expresion -> NUMBER .)
+
+
+state 10
+
+    (23) expresion -> INT . ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> INT . ID PTCOMA
+    (25) expresion -> INT . ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> INT . ID IGUALQUE ID PTCOMA
+
+    ID              shift and go to state 26
+
+
+state 11
+
+    (27) expresion -> ID .
+
+    SUMA            reduce using rule 27 (expresion -> ID .)
+    MENOS           reduce using rule 27 (expresion -> ID .)
+    MULTIPLICAR     reduce using rule 27 (expresion -> ID .)
+    DIVISION        reduce using rule 27 (expresion -> ID .)
+    MENORQUE        reduce using rule 27 (expresion -> ID .)
+    MAYORQUE        reduce using rule 27 (expresion -> ID .)
+    MENORIGUALQUE   reduce using rule 27 (expresion -> ID .)
+    MAYORIGUALQUE   reduce using rule 27 (expresion -> ID .)
+    IGUALQUE        reduce using rule 27 (expresion -> ID .)
+    $end            reduce using rule 27 (expresion -> ID .)
+    PARENTDER       reduce using rule 27 (expresion -> ID .)
+    CORCHETEDER     reduce using rule 27 (expresion -> ID .)
+
+
+state 12
+
+    (28) expresion -> END .
+
+    SUMA            reduce using rule 28 (expresion -> END .)
+    MENOS           reduce using rule 28 (expresion -> END .)
+    MULTIPLICAR     reduce using rule 28 (expresion -> END .)
+    DIVISION        reduce using rule 28 (expresion -> END .)
+    MENORQUE        reduce using rule 28 (expresion -> END .)
+    MAYORQUE        reduce using rule 28 (expresion -> END .)
+    MENORIGUALQUE   reduce using rule 28 (expresion -> END .)
+    MAYORIGUALQUE   reduce using rule 28 (expresion -> END .)
+    IGUALQUE        reduce using rule 28 (expresion -> END .)
+    $end            reduce using rule 28 (expresion -> END .)
+    PARENTDER       reduce using rule 28 (expresion -> END .)
+    CORCHETEDER     reduce using rule 28 (expresion -> END .)
+
+
+state 13
+
+    (18) expresion -> IF PARENTIZQ . expresion MAYORQUE expresion PARENTDER
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 27
+
+state 14
+
+    (6) expresion -> expresion SUMA . expresion
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 28
+
+state 15
+
+    (7) expresion -> expresion MENOS . expresion
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 29
+
+state 16
+
+    (8) expresion -> expresion MULTIPLICAR . expresion
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 30
+
+state 17
+
+    (9) expresion -> expresion DIVISION . expresion
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 31
+
+state 18
+
+    (12) expresion -> expresion MENORQUE . expresion
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 32
+
+state 19
+
+    (13) expresion -> expresion MAYORQUE . expresion
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 33
+
+state 20
+
+    (14) expresion -> expresion MENORIGUALQUE . expresion
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 34
+
+state 21
+
+    (15) expresion -> expresion MAYORIGUALQUE . expresion
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 35
+
+state 22
+
+    (16) expresion -> expresion IGUALQUE . expresion
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 36
+
+state 23
+
+    (10) expresion -> PARENTIZQ expresion . PARENTDER
+    (17) expresion -> PARENTIZQ expresion . MENORQUE expresion PARENTDER
+    (19) expresion -> PARENTIZQ expresion . MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> PARENTIZQ expresion . MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> PARENTIZQ expresion . IGUALQUE expresion PARENTDER
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+    PARENTDER       shift and go to state 37
+    MENORQUE        shift and go to state 38
+    MENORIGUALQUE   shift and go to state 39
+    MAYORIGUALQUE   shift and go to state 40
+    IGUALQUE        shift and go to state 41
+    SUMA            shift and go to state 14
+    MENOS           shift and go to state 15
+    MULTIPLICAR     shift and go to state 16
+    DIVISION        shift and go to state 17
+    MAYORQUE        shift and go to state 19
+
+
+state 24
+
+    (18) expresion -> IF . PARENTIZQ expresion MAYORQUE expresion PARENTDER
+
+    PARENTIZQ       shift and go to state 13
+
+
+state 25
+
+    (11) expresion -> CORCHETEIZQ expresion . CORCHETEDER
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+    CORCHETEDER     shift and go to state 42
+    SUMA            shift and go to state 14
+    MENOS           shift and go to state 15
+    MULTIPLICAR     shift and go to state 16
+    DIVISION        shift and go to state 17
+    MENORQUE        shift and go to state 18
+    MAYORQUE        shift and go to state 19
+    MENORIGUALQUE   shift and go to state 20
+    MAYORIGUALQUE   shift and go to state 21
+    IGUALQUE        shift and go to state 22
+
+
+state 26
+
+    (23) expresion -> INT ID . IGUALQUE NUMBER PTCOMA
+    (24) expresion -> INT ID . PTCOMA
+    (25) expresion -> INT ID . IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> INT ID . IGUALQUE ID PTCOMA
+
+    IGUALQUE        shift and go to state 43
+    PTCOMA          shift and go to state 44
+
+
+state 27
+
+    (18) expresion -> IF PARENTIZQ expresion . MAYORQUE expresion PARENTDER
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+    MAYORQUE        shift and go to state 45
+    SUMA            shift and go to state 14
+    MENOS           shift and go to state 15
+    MULTIPLICAR     shift and go to state 16
+    DIVISION        shift and go to state 17
+    MENORQUE        shift and go to state 18
+    MENORIGUALQUE   shift and go to state 20
+    MAYORIGUALQUE   shift and go to state 21
+    IGUALQUE        shift and go to state 22
+
+
+state 28
+
+    (6) expresion -> expresion SUMA expresion .
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+    SUMA            reduce using rule 6 (expresion -> expresion SUMA expresion .)
+    MENOS           reduce using rule 6 (expresion -> expresion SUMA expresion .)
+    MENORQUE        reduce using rule 6 (expresion -> expresion SUMA expresion .)
+    MAYORQUE        reduce using rule 6 (expresion -> expresion SUMA expresion .)
+    MENORIGUALQUE   reduce using rule 6 (expresion -> expresion SUMA expresion .)
+    MAYORIGUALQUE   reduce using rule 6 (expresion -> expresion SUMA expresion .)
+    $end            reduce using rule 6 (expresion -> expresion SUMA expresion .)
+    PARENTDER       reduce using rule 6 (expresion -> expresion SUMA expresion .)
+    CORCHETEDER     reduce using rule 6 (expresion -> expresion SUMA expresion .)
+    MULTIPLICAR     shift and go to state 16
+    DIVISION        shift and go to state 17
+    IGUALQUE        shift and go to state 22
+
+  ! MULTIPLICAR     [ reduce using rule 6 (expresion -> expresion SUMA expresion .) ]
+  ! DIVISION        [ reduce using rule 6 (expresion -> expresion SUMA expresion .) ]
+  ! IGUALQUE        [ reduce using rule 6 (expresion -> expresion SUMA expresion .) ]
+  ! SUMA            [ shift and go to state 14 ]
+  ! MENOS           [ shift and go to state 15 ]
+  ! MENORQUE        [ shift and go to state 18 ]
+  ! MAYORQUE        [ shift and go to state 19 ]
+  ! MENORIGUALQUE   [ shift and go to state 20 ]
+  ! MAYORIGUALQUE   [ shift and go to state 21 ]
+
+
+state 29
+
+    (7) expresion -> expresion MENOS expresion .
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+    SUMA            reduce using rule 7 (expresion -> expresion MENOS expresion .)
+    MENOS           reduce using rule 7 (expresion -> expresion MENOS expresion .)
+    MENORQUE        reduce using rule 7 (expresion -> expresion MENOS expresion .)
+    MAYORQUE        reduce using rule 7 (expresion -> expresion MENOS expresion .)
+    MENORIGUALQUE   reduce using rule 7 (expresion -> expresion MENOS expresion .)
+    MAYORIGUALQUE   reduce using rule 7 (expresion -> expresion MENOS expresion .)
+    $end            reduce using rule 7 (expresion -> expresion MENOS expresion .)
+    PARENTDER       reduce using rule 7 (expresion -> expresion MENOS expresion .)
+    CORCHETEDER     reduce using rule 7 (expresion -> expresion MENOS expresion .)
+    MULTIPLICAR     shift and go to state 16
+    DIVISION        shift and go to state 17
+    IGUALQUE        shift and go to state 22
+
+  ! MULTIPLICAR     [ reduce using rule 7 (expresion -> expresion MENOS expresion .) ]
+  ! DIVISION        [ reduce using rule 7 (expresion -> expresion MENOS expresion .) ]
+  ! IGUALQUE        [ reduce using rule 7 (expresion -> expresion MENOS expresion .) ]
+  ! SUMA            [ shift and go to state 14 ]
+  ! MENOS           [ shift and go to state 15 ]
+  ! MENORQUE        [ shift and go to state 18 ]
+  ! MAYORQUE        [ shift and go to state 19 ]
+  ! MENORIGUALQUE   [ shift and go to state 20 ]
+  ! MAYORIGUALQUE   [ shift and go to state 21 ]
+
+
+state 30
+
+    (8) expresion -> expresion MULTIPLICAR expresion .
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+    SUMA            reduce using rule 8 (expresion -> expresion MULTIPLICAR expresion .)
+    MENOS           reduce using rule 8 (expresion -> expresion MULTIPLICAR expresion .)
+    MULTIPLICAR     reduce using rule 8 (expresion -> expresion MULTIPLICAR expresion .)
+    DIVISION        reduce using rule 8 (expresion -> expresion MULTIPLICAR expresion .)
+    MENORQUE        reduce using rule 8 (expresion -> expresion MULTIPLICAR expresion .)
+    MAYORQUE        reduce using rule 8 (expresion -> expresion MULTIPLICAR expresion .)
+    MENORIGUALQUE   reduce using rule 8 (expresion -> expresion MULTIPLICAR expresion .)
+    MAYORIGUALQUE   reduce using rule 8 (expresion -> expresion MULTIPLICAR expresion .)
+    $end            reduce using rule 8 (expresion -> expresion MULTIPLICAR expresion .)
+    PARENTDER       reduce using rule 8 (expresion -> expresion MULTIPLICAR expresion .)
+    CORCHETEDER     reduce using rule 8 (expresion -> expresion MULTIPLICAR expresion .)
+    IGUALQUE        shift and go to state 22
+
+  ! IGUALQUE        [ reduce using rule 8 (expresion -> expresion MULTIPLICAR expresion .) ]
+  ! SUMA            [ shift and go to state 14 ]
+  ! MENOS           [ shift and go to state 15 ]
+  ! MULTIPLICAR     [ shift and go to state 16 ]
+  ! DIVISION        [ shift and go to state 17 ]
+  ! MENORQUE        [ shift and go to state 18 ]
+  ! MAYORQUE        [ shift and go to state 19 ]
+  ! MENORIGUALQUE   [ shift and go to state 20 ]
+  ! MAYORIGUALQUE   [ shift and go to state 21 ]
+
+
+state 31
+
+    (9) expresion -> expresion DIVISION expresion .
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+    SUMA            reduce using rule 9 (expresion -> expresion DIVISION expresion .)
+    MENOS           reduce using rule 9 (expresion -> expresion DIVISION expresion .)
+    MULTIPLICAR     reduce using rule 9 (expresion -> expresion DIVISION expresion .)
+    DIVISION        reduce using rule 9 (expresion -> expresion DIVISION expresion .)
+    MENORQUE        reduce using rule 9 (expresion -> expresion DIVISION expresion .)
+    MAYORQUE        reduce using rule 9 (expresion -> expresion DIVISION expresion .)
+    MENORIGUALQUE   reduce using rule 9 (expresion -> expresion DIVISION expresion .)
+    MAYORIGUALQUE   reduce using rule 9 (expresion -> expresion DIVISION expresion .)
+    $end            reduce using rule 9 (expresion -> expresion DIVISION expresion .)
+    PARENTDER       reduce using rule 9 (expresion -> expresion DIVISION expresion .)
+    CORCHETEDER     reduce using rule 9 (expresion -> expresion DIVISION expresion .)
+    IGUALQUE        shift and go to state 22
+
+  ! IGUALQUE        [ reduce using rule 9 (expresion -> expresion DIVISION expresion .) ]
+  ! SUMA            [ shift and go to state 14 ]
+  ! MENOS           [ shift and go to state 15 ]
+  ! MULTIPLICAR     [ shift and go to state 16 ]
+  ! DIVISION        [ shift and go to state 17 ]
+  ! MENORQUE        [ shift and go to state 18 ]
+  ! MAYORQUE        [ shift and go to state 19 ]
+  ! MENORIGUALQUE   [ shift and go to state 20 ]
+  ! MAYORIGUALQUE   [ shift and go to state 21 ]
+
+
+state 32
+
+    (12) expresion -> expresion MENORQUE expresion .
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+  ! shift/reduce conflict for SUMA resolved as shift
+  ! shift/reduce conflict for MENOS resolved as shift
+  ! shift/reduce conflict for MULTIPLICAR resolved as shift
+  ! shift/reduce conflict for DIVISION resolved as shift
+  ! shift/reduce conflict for MENORQUE resolved as shift
+  ! shift/reduce conflict for MAYORQUE resolved as shift
+  ! shift/reduce conflict for MENORIGUALQUE resolved as shift
+  ! shift/reduce conflict for MAYORIGUALQUE resolved as shift
+  ! shift/reduce conflict for IGUALQUE resolved as shift
+    $end            reduce using rule 12 (expresion -> expresion MENORQUE expresion .)
+    CORCHETEDER     reduce using rule 12 (expresion -> expresion MENORQUE expresion .)
+    PARENTDER       reduce using rule 12 (expresion -> expresion MENORQUE expresion .)
+    SUMA            shift and go to state 14
+    MENOS           shift and go to state 15
+    MULTIPLICAR     shift and go to state 16
+    DIVISION        shift and go to state 17
+    MENORQUE        shift and go to state 18
+    MAYORQUE        shift and go to state 19
+    MENORIGUALQUE   shift and go to state 20
+    MAYORIGUALQUE   shift and go to state 21
+    IGUALQUE        shift and go to state 22
+
+  ! SUMA            [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! MENOS           [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! MULTIPLICAR     [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! DIVISION        [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! MENORQUE        [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! MAYORQUE        [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! MENORIGUALQUE   [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! MAYORIGUALQUE   [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! IGUALQUE        [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+
+
+state 33
+
+    (13) expresion -> expresion MAYORQUE expresion .
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+  ! shift/reduce conflict for SUMA resolved as shift
+  ! shift/reduce conflict for MENOS resolved as shift
+  ! shift/reduce conflict for MULTIPLICAR resolved as shift
+  ! shift/reduce conflict for DIVISION resolved as shift
+  ! shift/reduce conflict for MENORQUE resolved as shift
+  ! shift/reduce conflict for MAYORQUE resolved as shift
+  ! shift/reduce conflict for MENORIGUALQUE resolved as shift
+  ! shift/reduce conflict for MAYORIGUALQUE resolved as shift
+  ! shift/reduce conflict for IGUALQUE resolved as shift
+    $end            reduce using rule 13 (expresion -> expresion MAYORQUE expresion .)
+    PARENTDER       reduce using rule 13 (expresion -> expresion MAYORQUE expresion .)
+    CORCHETEDER     reduce using rule 13 (expresion -> expresion MAYORQUE expresion .)
+    SUMA            shift and go to state 14
+    MENOS           shift and go to state 15
+    MULTIPLICAR     shift and go to state 16
+    DIVISION        shift and go to state 17
+    MENORQUE        shift and go to state 18
+    MAYORQUE        shift and go to state 19
+    MENORIGUALQUE   shift and go to state 20
+    MAYORIGUALQUE   shift and go to state 21
+    IGUALQUE        shift and go to state 22
+
+  ! SUMA            [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! MENOS           [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! MULTIPLICAR     [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! DIVISION        [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! MENORQUE        [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! MAYORQUE        [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! MENORIGUALQUE   [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! MAYORIGUALQUE   [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! IGUALQUE        [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+
+
+state 34
+
+    (14) expresion -> expresion MENORIGUALQUE expresion .
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+  ! shift/reduce conflict for SUMA resolved as shift
+  ! shift/reduce conflict for MENOS resolved as shift
+  ! shift/reduce conflict for MULTIPLICAR resolved as shift
+  ! shift/reduce conflict for DIVISION resolved as shift
+  ! shift/reduce conflict for MENORQUE resolved as shift
+  ! shift/reduce conflict for MAYORQUE resolved as shift
+  ! shift/reduce conflict for MENORIGUALQUE resolved as shift
+  ! shift/reduce conflict for MAYORIGUALQUE resolved as shift
+  ! shift/reduce conflict for IGUALQUE resolved as shift
+    $end            reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .)
+    CORCHETEDER     reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .)
+    PARENTDER       reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .)
+    SUMA            shift and go to state 14
+    MENOS           shift and go to state 15
+    MULTIPLICAR     shift and go to state 16
+    DIVISION        shift and go to state 17
+    MENORQUE        shift and go to state 18
+    MAYORQUE        shift and go to state 19
+    MENORIGUALQUE   shift and go to state 20
+    MAYORIGUALQUE   shift and go to state 21
+    IGUALQUE        shift and go to state 22
+
+  ! SUMA            [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! MENOS           [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! MULTIPLICAR     [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! DIVISION        [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! MENORQUE        [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! MAYORQUE        [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! MENORIGUALQUE   [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! MAYORIGUALQUE   [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! IGUALQUE        [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+
+
+state 35
+
+    (15) expresion -> expresion MAYORIGUALQUE expresion .
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+  ! shift/reduce conflict for SUMA resolved as shift
+  ! shift/reduce conflict for MENOS resolved as shift
+  ! shift/reduce conflict for MULTIPLICAR resolved as shift
+  ! shift/reduce conflict for DIVISION resolved as shift
+  ! shift/reduce conflict for MENORQUE resolved as shift
+  ! shift/reduce conflict for MAYORQUE resolved as shift
+  ! shift/reduce conflict for MENORIGUALQUE resolved as shift
+  ! shift/reduce conflict for MAYORIGUALQUE resolved as shift
+  ! shift/reduce conflict for IGUALQUE resolved as shift
+    $end            reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .)
+    CORCHETEDER     reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .)
+    PARENTDER       reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .)
+    SUMA            shift and go to state 14
+    MENOS           shift and go to state 15
+    MULTIPLICAR     shift and go to state 16
+    DIVISION        shift and go to state 17
+    MENORQUE        shift and go to state 18
+    MAYORQUE        shift and go to state 19
+    MENORIGUALQUE   shift and go to state 20
+    MAYORIGUALQUE   shift and go to state 21
+    IGUALQUE        shift and go to state 22
+
+  ! SUMA            [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! MENOS           [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! MULTIPLICAR     [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! DIVISION        [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! MENORQUE        [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! MAYORQUE        [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! MENORIGUALQUE   [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! MAYORIGUALQUE   [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! IGUALQUE        [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+
+
+state 36
+
+    (16) expresion -> expresion IGUALQUE expresion .
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+    SUMA            reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    MENOS           reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    MULTIPLICAR     reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    DIVISION        reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    MENORQUE        reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    MAYORQUE        reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    MENORIGUALQUE   reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    MAYORIGUALQUE   reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    $end            reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    CORCHETEDER     reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    PARENTDER       reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    IGUALQUE        shift and go to state 22
+
+  ! IGUALQUE        [ reduce using rule 16 (expresion -> expresion IGUALQUE expresion .) ]
+  ! SUMA            [ shift and go to state 14 ]
+  ! MENOS           [ shift and go to state 15 ]
+  ! MULTIPLICAR     [ shift and go to state 16 ]
+  ! DIVISION        [ shift and go to state 17 ]
+  ! MENORQUE        [ shift and go to state 18 ]
+  ! MAYORQUE        [ shift and go to state 19 ]
+  ! MENORIGUALQUE   [ shift and go to state 20 ]
+  ! MAYORIGUALQUE   [ shift and go to state 21 ]
+
+
+state 37
+
+    (10) expresion -> PARENTIZQ expresion PARENTDER .
+
+    SUMA            reduce using rule 10 (expresion -> PARENTIZQ expresion PARENTDER .)
+    MENOS           reduce using rule 10 (expresion -> PARENTIZQ expresion PARENTDER .)
+    MULTIPLICAR     reduce using rule 10 (expresion -> PARENTIZQ expresion PARENTDER .)
+    DIVISION        reduce using rule 10 (expresion -> PARENTIZQ expresion PARENTDER .)
+    MENORQUE        reduce using rule 10 (expresion -> PARENTIZQ expresion PARENTDER .)
+    MAYORQUE        reduce using rule 10 (expresion -> PARENTIZQ expresion PARENTDER .)
+    MENORIGUALQUE   reduce using rule 10 (expresion -> PARENTIZQ expresion PARENTDER .)
+    MAYORIGUALQUE   reduce using rule 10 (expresion -> PARENTIZQ expresion PARENTDER .)
+    IGUALQUE        reduce using rule 10 (expresion -> PARENTIZQ expresion PARENTDER .)
+    $end            reduce using rule 10 (expresion -> PARENTIZQ expresion PARENTDER .)
+    PARENTDER       reduce using rule 10 (expresion -> PARENTIZQ expresion PARENTDER .)
+    CORCHETEDER     reduce using rule 10 (expresion -> PARENTIZQ expresion PARENTDER .)
+
+
+state 38
+
+    (17) expresion -> PARENTIZQ expresion MENORQUE . expresion PARENTDER
+    (12) expresion -> expresion MENORQUE . expresion
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 46
+
+state 39
+
+    (19) expresion -> PARENTIZQ expresion MENORIGUALQUE . expresion PARENTDER
+    (14) expresion -> expresion MENORIGUALQUE . expresion
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 47
+
+state 40
+
+    (20) expresion -> PARENTIZQ expresion MAYORIGUALQUE . expresion PARENTDER
+    (15) expresion -> expresion MAYORIGUALQUE . expresion
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 48
+
+state 41
+
+    (21) expresion -> PARENTIZQ expresion IGUALQUE . expresion PARENTDER
+    (16) expresion -> expresion IGUALQUE . expresion
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 49
+
+state 42
+
+    (11) expresion -> CORCHETEIZQ expresion CORCHETEDER .
+
+    SUMA            reduce using rule 11 (expresion -> CORCHETEIZQ expresion CORCHETEDER .)
+    MENOS           reduce using rule 11 (expresion -> CORCHETEIZQ expresion CORCHETEDER .)
+    MULTIPLICAR     reduce using rule 11 (expresion -> CORCHETEIZQ expresion CORCHETEDER .)
+    DIVISION        reduce using rule 11 (expresion -> CORCHETEIZQ expresion CORCHETEDER .)
+    MENORQUE        reduce using rule 11 (expresion -> CORCHETEIZQ expresion CORCHETEDER .)
+    MAYORQUE        reduce using rule 11 (expresion -> CORCHETEIZQ expresion CORCHETEDER .)
+    MENORIGUALQUE   reduce using rule 11 (expresion -> CORCHETEIZQ expresion CORCHETEDER .)
+    MAYORIGUALQUE   reduce using rule 11 (expresion -> CORCHETEIZQ expresion CORCHETEDER .)
+    IGUALQUE        reduce using rule 11 (expresion -> CORCHETEIZQ expresion CORCHETEDER .)
+    $end            reduce using rule 11 (expresion -> CORCHETEIZQ expresion CORCHETEDER .)
+    PARENTDER       reduce using rule 11 (expresion -> CORCHETEIZQ expresion CORCHETEDER .)
+    CORCHETEDER     reduce using rule 11 (expresion -> CORCHETEIZQ expresion CORCHETEDER .)
+
+
+state 43
+
+    (23) expresion -> INT ID IGUALQUE . NUMBER PTCOMA
+    (25) expresion -> INT ID IGUALQUE . ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> INT ID IGUALQUE . ID PTCOMA
+
+    NUMBER          shift and go to state 51
+    ID              shift and go to state 50
+
+
+state 44
+
+    (24) expresion -> INT ID PTCOMA .
+
+    SUMA            reduce using rule 24 (expresion -> INT ID PTCOMA .)
+    MENOS           reduce using rule 24 (expresion -> INT ID PTCOMA .)
+    MULTIPLICAR     reduce using rule 24 (expresion -> INT ID PTCOMA .)
+    DIVISION        reduce using rule 24 (expresion -> INT ID PTCOMA .)
+    MENORQUE        reduce using rule 24 (expresion -> INT ID PTCOMA .)
+    MAYORQUE        reduce using rule 24 (expresion -> INT ID PTCOMA .)
+    MENORIGUALQUE   reduce using rule 24 (expresion -> INT ID PTCOMA .)
+    MAYORIGUALQUE   reduce using rule 24 (expresion -> INT ID PTCOMA .)
+    IGUALQUE        reduce using rule 24 (expresion -> INT ID PTCOMA .)
+    $end            reduce using rule 24 (expresion -> INT ID PTCOMA .)
+    PARENTDER       reduce using rule 24 (expresion -> INT ID PTCOMA .)
+    CORCHETEDER     reduce using rule 24 (expresion -> INT ID PTCOMA .)
+
+
+state 45
+
+    (18) expresion -> IF PARENTIZQ expresion MAYORQUE . expresion PARENTDER
+    (13) expresion -> expresion MAYORQUE . expresion
+    (4) expresion -> . PTCOMA
+    (6) expresion -> . expresion SUMA expresion
+    (7) expresion -> . expresion MENOS expresion
+    (8) expresion -> . expresion MULTIPLICAR expresion
+    (9) expresion -> . expresion DIVISION expresion
+    (10) expresion -> . PARENTIZQ expresion PARENTDER
+    (11) expresion -> . CORCHETEIZQ expresion CORCHETEDER
+    (12) expresion -> . expresion MENORQUE expresion
+    (13) expresion -> . expresion MAYORQUE expresion
+    (14) expresion -> . expresion MENORIGUALQUE expresion
+    (15) expresion -> . expresion MAYORIGUALQUE expresion
+    (16) expresion -> . expresion IGUALQUE expresion
+    (17) expresion -> . PARENTIZQ expresion MENORQUE expresion PARENTDER
+    (18) expresion -> . IF PARENTIZQ expresion MAYORQUE expresion PARENTDER
+    (19) expresion -> . PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER
+    (20) expresion -> . PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER
+    (21) expresion -> . PARENTIZQ expresion IGUALQUE expresion PARENTDER
+    (22) expresion -> . NUMBER
+    (23) expresion -> . INT ID IGUALQUE NUMBER PTCOMA
+    (24) expresion -> . INT ID PTCOMA
+    (25) expresion -> . INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA
+    (26) expresion -> . INT ID IGUALQUE ID PTCOMA
+    (27) expresion -> . ID
+    (28) expresion -> . END
+
+    PTCOMA          shift and go to state 6
+    PARENTIZQ       shift and go to state 7
+    CORCHETEIZQ     shift and go to state 8
+    IF              shift and go to state 24
+    NUMBER          shift and go to state 9
+    INT             shift and go to state 10
+    ID              shift and go to state 11
+    END             shift and go to state 12
+
+    expresion                      shift and go to state 52
+
+state 46
+
+    (17) expresion -> PARENTIZQ expresion MENORQUE expresion . PARENTDER
+    (12) expresion -> expresion MENORQUE expresion .
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+  ! shift/reduce conflict for PARENTDER resolved as shift
+  ! shift/reduce conflict for SUMA resolved as shift
+  ! shift/reduce conflict for MENOS resolved as shift
+  ! shift/reduce conflict for MULTIPLICAR resolved as shift
+  ! shift/reduce conflict for DIVISION resolved as shift
+  ! shift/reduce conflict for MENORQUE resolved as shift
+  ! shift/reduce conflict for MAYORQUE resolved as shift
+  ! shift/reduce conflict for MENORIGUALQUE resolved as shift
+  ! shift/reduce conflict for MAYORIGUALQUE resolved as shift
+  ! shift/reduce conflict for IGUALQUE resolved as shift
+    PARENTDER       shift and go to state 53
+    SUMA            shift and go to state 14
+    MENOS           shift and go to state 15
+    MULTIPLICAR     shift and go to state 16
+    DIVISION        shift and go to state 17
+    MENORQUE        shift and go to state 18
+    MAYORQUE        shift and go to state 19
+    MENORIGUALQUE   shift and go to state 20
+    MAYORIGUALQUE   shift and go to state 21
+    IGUALQUE        shift and go to state 22
+
+  ! PARENTDER       [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! MENORQUE        [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! MENORIGUALQUE   [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! MAYORIGUALQUE   [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! IGUALQUE        [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! SUMA            [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! MENOS           [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! MULTIPLICAR     [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! DIVISION        [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+  ! MAYORQUE        [ reduce using rule 12 (expresion -> expresion MENORQUE expresion .) ]
+
+
+state 47
+
+    (19) expresion -> PARENTIZQ expresion MENORIGUALQUE expresion . PARENTDER
+    (14) expresion -> expresion MENORIGUALQUE expresion .
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+  ! shift/reduce conflict for PARENTDER resolved as shift
+  ! shift/reduce conflict for SUMA resolved as shift
+  ! shift/reduce conflict for MENOS resolved as shift
+  ! shift/reduce conflict for MULTIPLICAR resolved as shift
+  ! shift/reduce conflict for DIVISION resolved as shift
+  ! shift/reduce conflict for MENORQUE resolved as shift
+  ! shift/reduce conflict for MAYORQUE resolved as shift
+  ! shift/reduce conflict for MENORIGUALQUE resolved as shift
+  ! shift/reduce conflict for MAYORIGUALQUE resolved as shift
+  ! shift/reduce conflict for IGUALQUE resolved as shift
+    PARENTDER       shift and go to state 54
+    SUMA            shift and go to state 14
+    MENOS           shift and go to state 15
+    MULTIPLICAR     shift and go to state 16
+    DIVISION        shift and go to state 17
+    MENORQUE        shift and go to state 18
+    MAYORQUE        shift and go to state 19
+    MENORIGUALQUE   shift and go to state 20
+    MAYORIGUALQUE   shift and go to state 21
+    IGUALQUE        shift and go to state 22
+
+  ! PARENTDER       [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! MENORQUE        [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! MENORIGUALQUE   [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! MAYORIGUALQUE   [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! IGUALQUE        [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! SUMA            [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! MENOS           [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! MULTIPLICAR     [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! DIVISION        [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+  ! MAYORQUE        [ reduce using rule 14 (expresion -> expresion MENORIGUALQUE expresion .) ]
+
+
+state 48
+
+    (20) expresion -> PARENTIZQ expresion MAYORIGUALQUE expresion . PARENTDER
+    (15) expresion -> expresion MAYORIGUALQUE expresion .
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+  ! shift/reduce conflict for PARENTDER resolved as shift
+  ! shift/reduce conflict for SUMA resolved as shift
+  ! shift/reduce conflict for MENOS resolved as shift
+  ! shift/reduce conflict for MULTIPLICAR resolved as shift
+  ! shift/reduce conflict for DIVISION resolved as shift
+  ! shift/reduce conflict for MENORQUE resolved as shift
+  ! shift/reduce conflict for MAYORQUE resolved as shift
+  ! shift/reduce conflict for MENORIGUALQUE resolved as shift
+  ! shift/reduce conflict for MAYORIGUALQUE resolved as shift
+  ! shift/reduce conflict for IGUALQUE resolved as shift
+    PARENTDER       shift and go to state 55
+    SUMA            shift and go to state 14
+    MENOS           shift and go to state 15
+    MULTIPLICAR     shift and go to state 16
+    DIVISION        shift and go to state 17
+    MENORQUE        shift and go to state 18
+    MAYORQUE        shift and go to state 19
+    MENORIGUALQUE   shift and go to state 20
+    MAYORIGUALQUE   shift and go to state 21
+    IGUALQUE        shift and go to state 22
+
+  ! PARENTDER       [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! MENORQUE        [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! MENORIGUALQUE   [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! MAYORIGUALQUE   [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! IGUALQUE        [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! SUMA            [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! MENOS           [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! MULTIPLICAR     [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! DIVISION        [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+  ! MAYORQUE        [ reduce using rule 15 (expresion -> expresion MAYORIGUALQUE expresion .) ]
+
+
+state 49
+
+    (21) expresion -> PARENTIZQ expresion IGUALQUE expresion . PARENTDER
+    (16) expresion -> expresion IGUALQUE expresion .
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+    PARENTDER       reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    MENORQUE        reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    MENORIGUALQUE   reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    MAYORIGUALQUE   reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    SUMA            reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    MENOS           reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    MULTIPLICAR     reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    DIVISION        reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    MAYORQUE        reduce using rule 16 (expresion -> expresion IGUALQUE expresion .)
+    IGUALQUE        shift and go to state 22
+
+  ! PARENTDER       [ shift and go to state 56 ]
+  ! IGUALQUE        [ reduce using rule 16 (expresion -> expresion IGUALQUE expresion .) ]
+  ! SUMA            [ shift and go to state 14 ]
+  ! MENOS           [ shift and go to state 15 ]
+  ! MULTIPLICAR     [ shift and go to state 16 ]
+  ! DIVISION        [ shift and go to state 17 ]
+  ! MENORQUE        [ shift and go to state 18 ]
+  ! MAYORQUE        [ shift and go to state 19 ]
+  ! MENORIGUALQUE   [ shift and go to state 20 ]
+  ! MAYORIGUALQUE   [ shift and go to state 21 ]
+
+
+state 50
+
+    (25) expresion -> INT ID IGUALQUE ID . MULTIPLICAR ID PTCOMA
+    (26) expresion -> INT ID IGUALQUE ID . PTCOMA
+
+    MULTIPLICAR     shift and go to state 57
+    PTCOMA          shift and go to state 58
+
+
+state 51
+
+    (23) expresion -> INT ID IGUALQUE NUMBER . PTCOMA
+
+    PTCOMA          shift and go to state 59
+
+
+state 52
+
+    (18) expresion -> IF PARENTIZQ expresion MAYORQUE expresion . PARENTDER
+    (13) expresion -> expresion MAYORQUE expresion .
+    (6) expresion -> expresion . SUMA expresion
+    (7) expresion -> expresion . MENOS expresion
+    (8) expresion -> expresion . MULTIPLICAR expresion
+    (9) expresion -> expresion . DIVISION expresion
+    (12) expresion -> expresion . MENORQUE expresion
+    (13) expresion -> expresion . MAYORQUE expresion
+    (14) expresion -> expresion . MENORIGUALQUE expresion
+    (15) expresion -> expresion . MAYORIGUALQUE expresion
+    (16) expresion -> expresion . IGUALQUE expresion
+
+  ! shift/reduce conflict for SUMA resolved as shift
+  ! shift/reduce conflict for MENOS resolved as shift
+  ! shift/reduce conflict for MULTIPLICAR resolved as shift
+  ! shift/reduce conflict for DIVISION resolved as shift
+  ! shift/reduce conflict for MENORQUE resolved as shift
+  ! shift/reduce conflict for MAYORQUE resolved as shift
+  ! shift/reduce conflict for MENORIGUALQUE resolved as shift
+  ! shift/reduce conflict for MAYORIGUALQUE resolved as shift
+  ! shift/reduce conflict for IGUALQUE resolved as shift
+    PARENTDER       shift and go to state 60
+    SUMA            shift and go to state 14
+    MENOS           shift and go to state 15
+    MULTIPLICAR     shift and go to state 16
+    DIVISION        shift and go to state 17
+    MENORQUE        shift and go to state 18
+    MAYORQUE        shift and go to state 19
+    MENORIGUALQUE   shift and go to state 20
+    MAYORIGUALQUE   shift and go to state 21
+    IGUALQUE        shift and go to state 22
+
+  ! MAYORQUE        [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! SUMA            [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! MENOS           [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! MULTIPLICAR     [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! DIVISION        [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! MENORQUE        [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! MENORIGUALQUE   [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! MAYORIGUALQUE   [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+  ! IGUALQUE        [ reduce using rule 13 (expresion -> expresion MAYORQUE expresion .) ]
+
+
+state 53
+
+    (17) expresion -> PARENTIZQ expresion MENORQUE expresion PARENTDER .
+
+    SUMA            reduce using rule 17 (expresion -> PARENTIZQ expresion MENORQUE expresion PARENTDER .)
+    MENOS           reduce using rule 17 (expresion -> PARENTIZQ expresion MENORQUE expresion PARENTDER .)
+    MULTIPLICAR     reduce using rule 17 (expresion -> PARENTIZQ expresion MENORQUE expresion PARENTDER .)
+    DIVISION        reduce using rule 17 (expresion -> PARENTIZQ expresion MENORQUE expresion PARENTDER .)
+    MENORQUE        reduce using rule 17 (expresion -> PARENTIZQ expresion MENORQUE expresion PARENTDER .)
+    MAYORQUE        reduce using rule 17 (expresion -> PARENTIZQ expresion MENORQUE expresion PARENTDER .)
+    MENORIGUALQUE   reduce using rule 17 (expresion -> PARENTIZQ expresion MENORQUE expresion PARENTDER .)
+    MAYORIGUALQUE   reduce using rule 17 (expresion -> PARENTIZQ expresion MENORQUE expresion PARENTDER .)
+    IGUALQUE        reduce using rule 17 (expresion -> PARENTIZQ expresion MENORQUE expresion PARENTDER .)
+    $end            reduce using rule 17 (expresion -> PARENTIZQ expresion MENORQUE expresion PARENTDER .)
+    PARENTDER       reduce using rule 17 (expresion -> PARENTIZQ expresion MENORQUE expresion PARENTDER .)
+    CORCHETEDER     reduce using rule 17 (expresion -> PARENTIZQ expresion MENORQUE expresion PARENTDER .)
+
+
+state 54
+
+    (19) expresion -> PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER .
+
+    SUMA            reduce using rule 19 (expresion -> PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER .)
+    MENOS           reduce using rule 19 (expresion -> PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER .)
+    MULTIPLICAR     reduce using rule 19 (expresion -> PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER .)
+    DIVISION        reduce using rule 19 (expresion -> PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER .)
+    MENORQUE        reduce using rule 19 (expresion -> PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER .)
+    MAYORQUE        reduce using rule 19 (expresion -> PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER .)
+    MENORIGUALQUE   reduce using rule 19 (expresion -> PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER .)
+    MAYORIGUALQUE   reduce using rule 19 (expresion -> PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER .)
+    IGUALQUE        reduce using rule 19 (expresion -> PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER .)
+    $end            reduce using rule 19 (expresion -> PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER .)
+    PARENTDER       reduce using rule 19 (expresion -> PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER .)
+    CORCHETEDER     reduce using rule 19 (expresion -> PARENTIZQ expresion MENORIGUALQUE expresion PARENTDER .)
+
+
+state 55
+
+    (20) expresion -> PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER .
+
+    SUMA            reduce using rule 20 (expresion -> PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER .)
+    MENOS           reduce using rule 20 (expresion -> PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER .)
+    MULTIPLICAR     reduce using rule 20 (expresion -> PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER .)
+    DIVISION        reduce using rule 20 (expresion -> PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER .)
+    MENORQUE        reduce using rule 20 (expresion -> PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER .)
+    MAYORQUE        reduce using rule 20 (expresion -> PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER .)
+    MENORIGUALQUE   reduce using rule 20 (expresion -> PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER .)
+    MAYORIGUALQUE   reduce using rule 20 (expresion -> PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER .)
+    IGUALQUE        reduce using rule 20 (expresion -> PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER .)
+    $end            reduce using rule 20 (expresion -> PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER .)
+    PARENTDER       reduce using rule 20 (expresion -> PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER .)
+    CORCHETEDER     reduce using rule 20 (expresion -> PARENTIZQ expresion MAYORIGUALQUE expresion PARENTDER .)
+
+
+state 56
+
+    (21) expresion -> PARENTIZQ expresion IGUALQUE expresion PARENTDER .
+
+    SUMA            reduce using rule 21 (expresion -> PARENTIZQ expresion IGUALQUE expresion PARENTDER .)
+    MENOS           reduce using rule 21 (expresion -> PARENTIZQ expresion IGUALQUE expresion PARENTDER .)
+    MULTIPLICAR     reduce using rule 21 (expresion -> PARENTIZQ expresion IGUALQUE expresion PARENTDER .)
+    DIVISION        reduce using rule 21 (expresion -> PARENTIZQ expresion IGUALQUE expresion PARENTDER .)
+    MENORQUE        reduce using rule 21 (expresion -> PARENTIZQ expresion IGUALQUE expresion PARENTDER .)
+    MAYORQUE        reduce using rule 21 (expresion -> PARENTIZQ expresion IGUALQUE expresion PARENTDER .)
+    MENORIGUALQUE   reduce using rule 21 (expresion -> PARENTIZQ expresion IGUALQUE expresion PARENTDER .)
+    MAYORIGUALQUE   reduce using rule 21 (expresion -> PARENTIZQ expresion IGUALQUE expresion PARENTDER .)
+    IGUALQUE        reduce using rule 21 (expresion -> PARENTIZQ expresion IGUALQUE expresion PARENTDER .)
+    $end            reduce using rule 21 (expresion -> PARENTIZQ expresion IGUALQUE expresion PARENTDER .)
+    PARENTDER       reduce using rule 21 (expresion -> PARENTIZQ expresion IGUALQUE expresion PARENTDER .)
+    CORCHETEDER     reduce using rule 21 (expresion -> PARENTIZQ expresion IGUALQUE expresion PARENTDER .)
+
+
+state 57
+
+    (25) expresion -> INT ID IGUALQUE ID MULTIPLICAR . ID PTCOMA
+
+    ID              shift and go to state 61
+
+
+state 58
+
+    (26) expresion -> INT ID IGUALQUE ID PTCOMA .
+
+    SUMA            reduce using rule 26 (expresion -> INT ID IGUALQUE ID PTCOMA .)
+    MENOS           reduce using rule 26 (expresion -> INT ID IGUALQUE ID PTCOMA .)
+    MULTIPLICAR     reduce using rule 26 (expresion -> INT ID IGUALQUE ID PTCOMA .)
+    DIVISION        reduce using rule 26 (expresion -> INT ID IGUALQUE ID PTCOMA .)
+    MENORQUE        reduce using rule 26 (expresion -> INT ID IGUALQUE ID PTCOMA .)
+    MAYORQUE        reduce using rule 26 (expresion -> INT ID IGUALQUE ID PTCOMA .)
+    MENORIGUALQUE   reduce using rule 26 (expresion -> INT ID IGUALQUE ID PTCOMA .)
+    MAYORIGUALQUE   reduce using rule 26 (expresion -> INT ID IGUALQUE ID PTCOMA .)
+    IGUALQUE        reduce using rule 26 (expresion -> INT ID IGUALQUE ID PTCOMA .)
+    $end            reduce using rule 26 (expresion -> INT ID IGUALQUE ID PTCOMA .)
+    PARENTDER       reduce using rule 26 (expresion -> INT ID IGUALQUE ID PTCOMA .)
+    CORCHETEDER     reduce using rule 26 (expresion -> INT ID IGUALQUE ID PTCOMA .)
+
+
+state 59
+
+    (23) expresion -> INT ID IGUALQUE NUMBER PTCOMA .
+
+    SUMA            reduce using rule 23 (expresion -> INT ID IGUALQUE NUMBER PTCOMA .)
+    MENOS           reduce using rule 23 (expresion -> INT ID IGUALQUE NUMBER PTCOMA .)
+    MULTIPLICAR     reduce using rule 23 (expresion -> INT ID IGUALQUE NUMBER PTCOMA .)
+    DIVISION        reduce using rule 23 (expresion -> INT ID IGUALQUE NUMBER PTCOMA .)
+    MENORQUE        reduce using rule 23 (expresion -> INT ID IGUALQUE NUMBER PTCOMA .)
+    MAYORQUE        reduce using rule 23 (expresion -> INT ID IGUALQUE NUMBER PTCOMA .)
+    MENORIGUALQUE   reduce using rule 23 (expresion -> INT ID IGUALQUE NUMBER PTCOMA .)
+    MAYORIGUALQUE   reduce using rule 23 (expresion -> INT ID IGUALQUE NUMBER PTCOMA .)
+    IGUALQUE        reduce using rule 23 (expresion -> INT ID IGUALQUE NUMBER PTCOMA .)
+    $end            reduce using rule 23 (expresion -> INT ID IGUALQUE NUMBER PTCOMA .)
+    PARENTDER       reduce using rule 23 (expresion -> INT ID IGUALQUE NUMBER PTCOMA .)
+    CORCHETEDER     reduce using rule 23 (expresion -> INT ID IGUALQUE NUMBER PTCOMA .)
+
+
+state 60
+
+    (18) expresion -> IF PARENTIZQ expresion MAYORQUE expresion PARENTDER .
+
+    SUMA            reduce using rule 18 (expresion -> IF PARENTIZQ expresion MAYORQUE expresion PARENTDER .)
+    MENOS           reduce using rule 18 (expresion -> IF PARENTIZQ expresion MAYORQUE expresion PARENTDER .)
+    MULTIPLICAR     reduce using rule 18 (expresion -> IF PARENTIZQ expresion MAYORQUE expresion PARENTDER .)
+    DIVISION        reduce using rule 18 (expresion -> IF PARENTIZQ expresion MAYORQUE expresion PARENTDER .)
+    MENORQUE        reduce using rule 18 (expresion -> IF PARENTIZQ expresion MAYORQUE expresion PARENTDER .)
+    MAYORQUE        reduce using rule 18 (expresion -> IF PARENTIZQ expresion MAYORQUE expresion PARENTDER .)
+    MENORIGUALQUE   reduce using rule 18 (expresion -> IF PARENTIZQ expresion MAYORQUE expresion PARENTDER .)
+    MAYORIGUALQUE   reduce using rule 18 (expresion -> IF PARENTIZQ expresion MAYORQUE expresion PARENTDER .)
+    IGUALQUE        reduce using rule 18 (expresion -> IF PARENTIZQ expresion MAYORQUE expresion PARENTDER .)
+    $end            reduce using rule 18 (expresion -> IF PARENTIZQ expresion MAYORQUE expresion PARENTDER .)
+    PARENTDER       reduce using rule 18 (expresion -> IF PARENTIZQ expresion MAYORQUE expresion PARENTDER .)
+    CORCHETEDER     reduce using rule 18 (expresion -> IF PARENTIZQ expresion MAYORQUE expresion PARENTDER .)
+
+
+state 61
+
+    (25) expresion -> INT ID IGUALQUE ID MULTIPLICAR ID . PTCOMA
+
+    PTCOMA          shift and go to state 62
+
+
+state 62
+
+    (25) expresion -> INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA .
+
+    SUMA            reduce using rule 25 (expresion -> INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA .)
+    MENOS           reduce using rule 25 (expresion -> INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA .)
+    MULTIPLICAR     reduce using rule 25 (expresion -> INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA .)
+    DIVISION        reduce using rule 25 (expresion -> INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA .)
+    MENORQUE        reduce using rule 25 (expresion -> INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA .)
+    MAYORQUE        reduce using rule 25 (expresion -> INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA .)
+    MENORIGUALQUE   reduce using rule 25 (expresion -> INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA .)
+    MAYORIGUALQUE   reduce using rule 25 (expresion -> INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA .)
+    IGUALQUE        reduce using rule 25 (expresion -> INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA .)
+    $end            reduce using rule 25 (expresion -> INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA .)
+    PARENTDER       reduce using rule 25 (expresion -> INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA .)
+    CORCHETEDER     reduce using rule 25 (expresion -> INT ID IGUALQUE ID MULTIPLICAR ID PTCOMA .)
+
+WARNING: 
+WARNING: Conflicts:
+WARNING: 
+WARNING: shift/reduce conflict for SUMA in state 32 resolved as shift
+WARNING: shift/reduce conflict for MENOS in state 32 resolved as shift
+WARNING: shift/reduce conflict for MULTIPLICAR in state 32 resolved as shift
+WARNING: shift/reduce conflict for DIVISION in state 32 resolved as shift
+WARNING: shift/reduce conflict for MENORQUE in state 32 resolved as shift
+WARNING: shift/reduce conflict for MAYORQUE in state 32 resolved as shift
+WARNING: shift/reduce conflict for MENORIGUALQUE in state 32 resolved as shift
+WARNING: shift/reduce conflict for MAYORIGUALQUE in state 32 resolved as shift
+WARNING: shift/reduce conflict for IGUALQUE in state 32 resolved as shift
+WARNING: shift/reduce conflict for SUMA in state 33 resolved as shift
+WARNING: shift/reduce conflict for MENOS in state 33 resolved as shift
+WARNING: shift/reduce conflict for MULTIPLICAR in state 33 resolved as shift
+WARNING: shift/reduce conflict for DIVISION in state 33 resolved as shift
+WARNING: shift/reduce conflict for MENORQUE in state 33 resolved as shift
+WARNING: shift/reduce conflict for MAYORQUE in state 33 resolved as shift
+WARNING: shift/reduce conflict for MENORIGUALQUE in state 33 resolved as shift
+WARNING: shift/reduce conflict for MAYORIGUALQUE in state 33 resolved as shift
+WARNING: shift/reduce conflict for IGUALQUE in state 33 resolved as shift
+WARNING: shift/reduce conflict for SUMA in state 34 resolved as shift
+WARNING: shift/reduce conflict for MENOS in state 34 resolved as shift
+WARNING: shift/reduce conflict for MULTIPLICAR in state 34 resolved as shift
+WARNING: shift/reduce conflict for DIVISION in state 34 resolved as shift
+WARNING: shift/reduce conflict for MENORQUE in state 34 resolved as shift
+WARNING: shift/reduce conflict for MAYORQUE in state 34 resolved as shift
+WARNING: shift/reduce conflict for MENORIGUALQUE in state 34 resolved as shift
+WARNING: shift/reduce conflict for MAYORIGUALQUE in state 34 resolved as shift
+WARNING: shift/reduce conflict for IGUALQUE in state 34 resolved as shift
+WARNING: shift/reduce conflict for SUMA in state 35 resolved as shift
+WARNING: shift/reduce conflict for MENOS in state 35 resolved as shift
+WARNING: shift/reduce conflict for MULTIPLICAR in state 35 resolved as shift
+WARNING: shift/reduce conflict for DIVISION in state 35 resolved as shift
+WARNING: shift/reduce conflict for MENORQUE in state 35 resolved as shift
+WARNING: shift/reduce conflict for MAYORQUE in state 35 resolved as shift
+WARNING: shift/reduce conflict for MENORIGUALQUE in state 35 resolved as shift
+WARNING: shift/reduce conflict for MAYORIGUALQUE in state 35 resolved as shift
+WARNING: shift/reduce conflict for IGUALQUE in state 35 resolved as shift
+WARNING: shift/reduce conflict for PARENTDER in state 46 resolved as shift
+WARNING: shift/reduce conflict for SUMA in state 46 resolved as shift
+WARNING: shift/reduce conflict for MENOS in state 46 resolved as shift
+WARNING: shift/reduce conflict for MULTIPLICAR in state 46 resolved as shift
+WARNING: shift/reduce conflict for DIVISION in state 46 resolved as shift
+WARNING: shift/reduce conflict for MENORQUE in state 46 resolved as shift
+WARNING: shift/reduce conflict for MAYORQUE in state 46 resolved as shift
+WARNING: shift/reduce conflict for MENORIGUALQUE in state 46 resolved as shift
+WARNING: shift/reduce conflict for MAYORIGUALQUE in state 46 resolved as shift
+WARNING: shift/reduce conflict for IGUALQUE in state 46 resolved as shift
+WARNING: shift/reduce conflict for PARENTDER in state 47 resolved as shift
+WARNING: shift/reduce conflict for SUMA in state 47 resolved as shift
+WARNING: shift/reduce conflict for MENOS in state 47 resolved as shift
+WARNING: shift/reduce conflict for MULTIPLICAR in state 47 resolved as shift
+WARNING: shift/reduce conflict for DIVISION in state 47 resolved as shift
+WARNING: shift/reduce conflict for MENORQUE in state 47 resolved as shift
+WARNING: shift/reduce conflict for MAYORQUE in state 47 resolved as shift
+WARNING: shift/reduce conflict for MENORIGUALQUE in state 47 resolved as shift
+WARNING: shift/reduce conflict for MAYORIGUALQUE in state 47 resolved as shift
+WARNING: shift/reduce conflict for IGUALQUE in state 47 resolved as shift
+WARNING: shift/reduce conflict for PARENTDER in state 48 resolved as shift
+WARNING: shift/reduce conflict for SUMA in state 48 resolved as shift
+WARNING: shift/reduce conflict for MENOS in state 48 resolved as shift
+WARNING: shift/reduce conflict for MULTIPLICAR in state 48 resolved as shift
+WARNING: shift/reduce conflict for DIVISION in state 48 resolved as shift
+WARNING: shift/reduce conflict for MENORQUE in state 48 resolved as shift
+WARNING: shift/reduce conflict for MAYORQUE in state 48 resolved as shift
+WARNING: shift/reduce conflict for MENORIGUALQUE in state 48 resolved as shift
+WARNING: shift/reduce conflict for MAYORIGUALQUE in state 48 resolved as shift
+WARNING: shift/reduce conflict for IGUALQUE in state 48 resolved as shift
+WARNING: shift/reduce conflict for SUMA in state 52 resolved as shift
+WARNING: shift/reduce conflict for MENOS in state 52 resolved as shift
+WARNING: shift/reduce conflict for MULTIPLICAR in state 52 resolved as shift
+WARNING: shift/reduce conflict for DIVISION in state 52 resolved as shift
+WARNING: shift/reduce conflict for MENORQUE in state 52 resolved as shift
+WARNING: shift/reduce conflict for MAYORQUE in state 52 resolved as shift
+WARNING: shift/reduce conflict for MENORIGUALQUE in state 52 resolved as shift
+WARNING: shift/reduce conflict for MAYORIGUALQUE in state 52 resolved as shift
+WARNING: shift/reduce conflict for IGUALQUE in state 52 resolved as shift
