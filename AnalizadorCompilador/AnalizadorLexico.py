@@ -10,11 +10,11 @@ tokens = (
 "PTCOMA", "PUNTO","IGUALIGUAL","CORCHETEIZQ","CORCHETEDER","COMILLA","DOPUNTOS","MODULO","COMENTARIO",
 #PALABRAS RESERVADAS
 "USING", "CLASS", "STATIC", "VOID", "INT", "DOUBLE", "IF", "WHILE", "THIS", "RETURN", "ELSE", "TRUE", "FALSE",
-"IN", "CONST", "FOR", "NEW", "FIXED", "OPERATOR", "DELEGATE", "STRING", "CASE", "CHAR", "IMPLICIT","ABSTRACT","AS",
+"IN", "CONST", "FOR", "NEW", "FIXED", "OPERATOR", "DELEGATE", "STRING", "CASE", "CHAR", "IMPLICIT","AS",
 "BREAK","BYTE","CATCH","CONTINUE","DEFAULT","DO","EVENT","EXPLICIT","EXTERN","FINALLY","FOREACH","GOTO","INTERFACE",
 "INTERNAL","IS","LOCK","LONG","NAMESPACE","NULL","OBJECT","OUT","PRIVATE","PUBLIC","PROTECTED","REF","STRUCT","SWITCH",
 "THROW","TRY","TYPEOF","UINT","ULONG","UNCHECKED","UNSAFE","USHORT","VIRTUAL","VOLATILE","FLOAT","MAIN","COUT","CIN",
-"DIPLED","DIPLEI","END","IGNORE",
+"DIPLED","DIPLEI","END","IGNORE","TIPO","DECIMAL","MASMAS",
 #OTHERS
 "ID","NUMBER", "COMMENT"
 #"DECIMAL"
@@ -67,6 +67,14 @@ t_COMENTARIO = r'\#'
 
 def t_USING(t):
     r'using'
+    return t
+
+def t_MASMAS(t):
+    r'\+\+'
+    return t
+
+def t_TIPO(t):
+    r'int | double'
     return t
 
 def t_END(t):
@@ -355,6 +363,11 @@ def t_ID (t):
 
 def t_NUMBER(t):
     r'\d+(\.\d+)?'
+    t.value = float(t.value)
+    return t
+
+def t_DECIMAL(t):
+    r'\d+[.]\d+'
     t.value = float(t.value)
     return t
 
